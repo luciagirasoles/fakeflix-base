@@ -11,6 +11,7 @@ end
 #  duration    :integer
 #  price       :integer
 #  rating      :integer
+#  status      :integer          default("comingsoon")
 #  title       :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
