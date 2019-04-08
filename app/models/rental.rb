@@ -1,5 +1,7 @@
 class Rental < ApplicationRecord
   belongs_to :rentable, polymorphic: true
+  has_many :series
+  has_many :movies
 end
 
 # == Schema Information
