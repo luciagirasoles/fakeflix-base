@@ -1,4 +1,5 @@
 class Movie < ApplicationRecord
+    enum status: { comingsoon: 0, preorder: 1, billboard: 2 }
 end
 
 # == Schema Information
