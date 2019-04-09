@@ -1,5 +1,7 @@
 class Episode < ApplicationRecord
   belongs_to :serie
+  
+  
 end
 
 # == Schema Information
@@ -9,7 +11,7 @@ end
 #  id          :bigint(8)        not null, primary key
 #  description :text
 #  duration    :integer
-#  progress    :integer
+#  progress    :integer          default(0)
 #  title       :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null

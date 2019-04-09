@@ -3,6 +3,10 @@ class Serie < ApplicationRecord
     enum status: { comingsoon: 0, preorder: 1, billboard: 2 }
     has_many :rentals, as: :rentable
 
+    def rented
+        self.rentals.any?
+      end
+
 end
 
 # == Schema Information
