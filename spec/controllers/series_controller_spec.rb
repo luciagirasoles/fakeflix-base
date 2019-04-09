@@ -1,3 +1,2 @@
-class SeriesController < ApplicationController
+require 'rails_helper'
 
-end

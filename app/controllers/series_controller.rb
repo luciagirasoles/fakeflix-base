@@ -1,3 +1,3 @@
-class Seriesontroller < ApplicationController
+class SeriesController < ApplicationController
 
 end

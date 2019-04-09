@@ -1,3 +1,1 @@
-class MoviesController < ApplicationController
-
-end
+require 'rails_helper'
