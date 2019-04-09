@@ -1,6 +1,7 @@
 class Serie < ApplicationRecord
     has_many :episodes
     enum status: { comingsoon: 0, preorder: 1, billboard: 2 }
+    has_many :rentals, as: :rentable
 
 end
 
