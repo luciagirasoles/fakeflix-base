@@ -11,6 +11,7 @@ end
 #  description :text
 #  duration    :integer
 #  price       :integer
+#  progress    :integer
 #  rating      :integer
 #  status      :integer          default("comingsoon")
 #  title       :string
