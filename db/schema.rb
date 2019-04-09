@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_220634) do
     t.bigint "serie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "progress"
+    t.integer "progress", default: 0
     t.index ["serie_id"], name: "index_episodes_on_serie_id"
   end
 
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_220634) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "status", default: 0
-    t.integer "progress"
+    t.integer "progress", default: 0
   end
 
   create_table "rentals", force: :cascade do |t|
