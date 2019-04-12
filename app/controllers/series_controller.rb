@@ -17,8 +17,11 @@ class SeriesController < ApplicationController
     )
     
   end
-
-  def update
+  def rating
+    serie = Serie.find(params[:series_id])
+    serie["rating"] = params[:rating]
+    serie.save
+    render json: serie.as_json(only:[:rating])
   end
 
 end

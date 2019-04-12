@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_220634) do
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.integer "rating"
+    t.integer "rating", default: 0
     t.integer "duration"
     t.integer "price"
     t.datetime "created_at", null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2019_04_09_220634) do
   create_table "series", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.integer "rating"
+    t.integer "rating", default: 0
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

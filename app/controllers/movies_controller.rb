@@ -18,6 +18,13 @@ class MoviesController < ApplicationController
     render json: movie.as_json(only:[:progress])
   end
 
+  def rating
+    movie = Movie.find(params[:movie_id])
+    movie["rating"] = params[:rating]
+    movie.save
+    render json: movie.as_json(only:[:rating])
+  end
+
 end
 
 # Table name: movies
