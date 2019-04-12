@@ -8,10 +8,14 @@ class MoviesController < ApplicationController
   end
 
   def show
-    render json: Movie.find(params[:id]).as_json(methods: [:rented])
+    render json: Movie.find(params[:id]).as_json(methods: [:rented],except: [:created_at, :updated_at])
   end
 
   def update
+    movie = Movie.find(params[:movie_id])
+    movie["progress"] = params[:progress]
+    movie.save
+    render json: movie.as_json(only:[:progress])
   end
 
 end
